@@ -78,3 +78,23 @@ def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
         df_rolled_full = df_rolled[cols]
 
     return df_rolled_full
+
+
+def get_aggregated_df(df_rolled: pd.DataFrame, aggregations: dict,
+                   id_col: str='id',
+                   target_col: str='target_shift',
+                   datetime_col: str='ref_date',
+                   ) -> pd.DataFrame:
+    aggregations[target_col] = 'last'
+    df_aggregated = df_rolled.groupby([id_col, datetime_col]).agg(aggregations)
+    df_aggregated.reset_index(inplace=True)
+    # Rename columns
+    df_aggregated.columns = [i[0] + '_' + i[1] if len(i) == 2 else i for i in
+                             df_aggregated.columns]
+    df_aggregated.columns = [i[:-1] if i[-1] == '_' else i for i in
+                             df_aggregated.columns]
+    df_aggregated = pd.concat(
+        [df_aggregated, pd.get_dummies(list(df_aggregated.id))], axis=1)
+    df_aggregated.rename(columns={target_col + '_last': 'target_col'},
+                         inplace=True)
+    return df_aggregated
