@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb265ee8-4f72-49ed-99ba-a7dc003c1242" name="Default Changelist" comment="" />
+    <list default="true" id="bb265ee8-4f72-49ed-99ba-a7dc003c1242" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="LICENSE" value="1" />
           <entry key="csv" value="3" />
           <entry key="gitignore" value="1" />
           <entry key="md" value="1" />
@@ -32,7 +37,7 @@
           <entry key="CSV" value="3" />
           <entry key="Git file" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="9" />
         </counts>
       </usages-collector>
@@ -40,7 +45,7 @@
         <counts>
           <entry key="Python Console" value="760" />
           <entry key="md" value="519" />
-          <entry key="py" value="2913" />
+          <entry key="py" value="3417" />
           <entry key="txt" value="76" />
         </counts>
       </usages-collector>
@@ -48,7 +53,7 @@
         <counts>
           <entry key="Markdown" value="519" />
           <entry key="PLAIN_TEXT" value="76" />
-          <entry key="Python" value="3673" />
+          <entry key="Python" value="4177" />
         </counts>
       </usages-collector>
     </session>
@@ -59,8 +64,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <first_editor relative-caret-position="135">
+                <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -69,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -86,23 +91,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timeseries_toolkit/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="91" column="61" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
+            <state relative-caret-position="345">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1533900702869" expanded="true" signature="129:134" ph="..." />
-                <marker date="1533900702869" expanded="true" signature="527:542" ph="..." />
-                <marker date="1533900702869" expanded="true" signature="1151:1469" ph="..." />
+                <marker date="1533914723062" expanded="true" signature="968:1184" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timeseries_toolkit/tests/test_preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="129" selection-start-line="19" selection-start-column="129" selection-end-line="19" selection-end-column="129" />
+            <state relative-caret-position="120">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -114,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/timeseries_toolkit/tests/fixtures/test_ts_data.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -148,10 +151,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/timeseries_toolkit/tests/test_preprocessing.py" />
         <option value="$PROJECT_DIR$/timeseries_toolkit/preprocessing.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/timeseries_toolkit/LICENSE" />
       </list>
     </option>
   </component>
@@ -217,8 +221,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/timeseries_toolkit/tests/fixtures" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/timeseries_toolkit/tests/fixtures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,34 +268,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_preprocessing - 2018.08.10 at 10h 52m 46s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="test_preprocessing - 2018.08.10 at 10h 53m 05s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="test_preprocessing - 2018.08.10 at 10h 54m 29s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="test_preprocessing - 2018.08.10 at 10h 56m 18s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="test_preprocessing - 2018.08.10 at 11h 07m 17s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="test_preprocessing - 2018.08.10 at 11h 07m 18s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="test_preprocessing - 2018.08.10 at 11h 08m 27s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="test_preprocessing - 2018.08.10 at 11h 12m 31s.xml">
-      <configuration name="test_preprocessing" configurationId="tests" />
-    </history-entry>
     <history-entry file="test_preprocessing - 2018.08.10 at 11h 16m 02s.xml">
       <configuration name="test_preprocessing" configurationId="tests" />
     </history-entry>
     <history-entry file="test_preprocessing - 2018.08.10 at 11h 16m 26s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 13m 34s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 13m 37s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 14m 31s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 19m 02s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 19m 04s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 19m 15s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 21m 21s.xml">
+      <configuration name="test_preprocessing" configurationId="tests" />
+    </history-entry>
+    <history-entry file="test_preprocessing - 2018.08.10 at 16h 22m 17s.xml">
       <configuration name="test_preprocessing" configurationId="tests" />
     </history-entry>
   </component>
@@ -321,63 +325,67 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/timeseries_toolkit/tests/test_preprocessing.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>df_rolled = roll.get_rolled()</expression-string>
+        <expression-string>df_rolled.loc[(df_rolled.id == 'AXP') &amp; (df_rolled['ref_date'] == pd.to_datetime('2017-01-09')), 'target_shift']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>roll.get_rolled()</expression-string>
+        <expression-string>df_rolled.loc[(df_rolled.id == 'AXP') &amp; (df_rolled['ref_date'] == pd.to_datetime('2017-01-09')), 'target_shift'] == 76.62</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>roll = preprocessing.RollingWindow(df, 10, 4)</expression-string>
+        <expression-string>df_rolled.loc[(df_rolled.id == 'AXP') &amp; (df_rolled['ref_date'] == pd.to_datetime('2017-01-09')), 'target_roll'] == 76.62</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df</expression-string>
+        <expression-string>str(pd.to_datetime(df.loc[df['id'] == 'AXP', 'datetime']).dt.date.sort_values().unique()[feature_window-1])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>test.get_rolled()</expression-string>
+        <expression-string>str(df_rolled.loc[df_rolled['id'] =='AXP', 'ref_date'].min())</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>test = preprocessing.RollingWindow(df, 'target', 10, 4)</expression-string>
+        <expression-string>str(pd.to_datetime(df.loc[df['id'] == 'AXP', 'datetime'].dt.date).sort_values().unique()[feature_window-1])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_rolled = preprocessing.RollingWindow.get_rolled(df, 'target', 10, 4)</expression-string>
+        <expression-string>str(pd.to_datetime(df.loc[df['id'] == 'AXP', 'datetime']).sort_values().unique()[feature_window-1])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_rolled = preprocessing.get_rolled(df, 'target', 10, 4)</expression-string>
+        <expression-string>pd.to_datetime(df.loc[df['id'] == 'AXP', 'datetime']).sort_values().unique()[feature_window-1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df = pd.read_csv('timeseries_toolkit/tests/fixtures/test_ts_data.csv')</expression-string>
+        <expression-string>df.loc[df['id'] == 'AXP', 'datetime'].sort_values().unique()[feature_window-1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -393,18 +401,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/all_stocks_2017-01-01_to_2018-01-01.csv">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda/envs/timeseries_toolkit/lib/python3.6/site-packages/pandas/core/generic.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -430,30 +426,54 @@
     <entry file="file://$PROJECT_DIR$/timeseries_toolkit/tests/fixtures/test_ts_data.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timeseries_toolkit/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="91" column="61" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1533900702869" expanded="true" signature="129:134" ph="..." />
-            <marker date="1533900702869" expanded="true" signature="527:542" ph="..." />
-            <marker date="1533900702869" expanded="true" signature="1151:1469" ph="..." />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timeseries_toolkit/tests/test_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="129" selection-start-line="19" selection-start-column="129" selection-end-line="19" selection-end-column="129" />
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeseries_toolkit/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1533914723062" expanded="true" signature="968:1184" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
         </state>
       </provider>
     </entry>

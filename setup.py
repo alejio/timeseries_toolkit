@@ -6,4 +6,11 @@ setup(name='timeseries_toolkit',
       install_requires=[open('requirements.txt').read().splitlines()],
       packages=find_packages(),
       author='Alex Spanos',
-      author_email='alexi.spanos@yahoo.com')
+      url = 'https://github.com/alejio/timeseries_toolkit',
+      author_email='alexi.spanos@yahoo.com',
+      classifiers = [
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: MIT License",
+            "Operating System :: OS Independent",
+      ]
+)
