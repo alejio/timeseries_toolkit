@@ -15,6 +15,7 @@ def map_timeid(datetime: pd.Series) -> pd.Series:
 
 
 def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
+                   id_col : str='id',
                    target_col: str='target',
                    datetime_col: str='datetime',
                    dtformat: str='%d/%m/%Y') -> pd.DataFrame:
@@ -32,38 +33,38 @@ def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
                                     format=dtformat).dt.date
 
     df['timeID'] = map_timeid(df[datetime_col])
-    df['kind'] = df['id']
+    df['kind'] = df[id_col]
     # Leave out target info
-    df_target = df[['id', datetime_col, target_col]]
-    df_target['target_shift'] = df_target.groupby('id')[target_col].shift(
+    df_target = df[[id_col, datetime_col, target_col]]
+    df_target['target_shift'] = df_target.groupby(id_col)[target_col].shift(
         -forecast_horizon)
     df_target = df_target.rename(columns={datetime_col: 'ref_date'})
     df_target.drop(target_col, 1, inplace=True)
     # Apply rolling an do some processing
-    df_rolled = roll_time_series(df, column_id='id', column_sort='timeID',
+    df_rolled = roll_time_series(df, column_id=id_col, column_sort='timeID',
                                  column_kind='kind', rolling_direction=1,
                                  max_timeshift=feature_window - 1)
 
-    df_rolled = df_rolled.rename(columns={'id': 'winID', 'kind': 'id'})
+    df_rolled = df_rolled.rename(columns={id_col: 'winID', 'kind': id_col})
 
     cols = list(df_rolled.columns.values)
-    first_cols = ['id', 'winID', 'timeID', datetime_col]
+    first_cols = [id_col, 'winID', 'timeID', datetime_col]
     remaining_cols = sorted(list(set(cols) - set(first_cols)))
     cols = first_cols + remaining_cols
     df_rolled = df_rolled[cols].sort_values(
-        by=['id', 'winID', 'timeID']).reset_index(drop=True)
-    df_rolled['ref_date'] = df_rolled.groupby(['id', 'winID'])[
+        by=[id_col, 'winID', 'timeID']).reset_index(drop=True)
+    df_rolled['ref_date'] = df_rolled.groupby([id_col, 'winID'])[
         datetime_col].transform('last')
 
     # Join target information to rolled data and do some processing
     df_rolled_full = pd.merge(df_rolled, df_target, how='left',
-                              on=['id', 'ref_date'])
+                              on=[id_col, 'ref_date'])
     df_rolled_full = df_rolled_full[
-        df_rolled_full.groupby(['id', 'winID'])['timeID'].transform(
+        df_rolled_full.groupby([id_col, 'winID'])['timeID'].transform(
             len) == feature_window]
     df_rolled_full.dropna(subset=['target_shift'], inplace=True)
     cols = list(df_rolled_full.columns)
-    first_cols = ['id', 'ref_date', 'winID', datetime_col, 'timeID',
+    first_cols = [id_col, 'ref_date', 'winID', datetime_col, 'timeID',
                   'target_shift']
     remaining_cols = list(set(cols) - set(first_cols))
     cols = first_cols + sorted(remaining_cols)
