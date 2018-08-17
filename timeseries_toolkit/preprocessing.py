@@ -15,6 +15,7 @@ def map_timeid(datetime: pd.Series) -> pd.Series:
 
 
 def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
+                   df_modelling: bool=True,
                    id_col : str='id',
                    target_col: str='target',
                    datetime_col: str='datetime',
@@ -55,19 +56,25 @@ def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
         by=[id_col, 'winID', 'timeID']).reset_index(drop=True)
     df_rolled['ref_date'] = df_rolled.groupby([id_col, 'winID'])[
         datetime_col].transform('last')
-
+    if df_modelling:
     # Join target information to rolled data and do some processing
-    df_rolled_full = pd.merge(df_rolled, df_target, how='left',
-                              on=[id_col, 'ref_date'])
-    df_rolled_full = df_rolled_full[
-        df_rolled_full.groupby([id_col, 'winID'])['timeID'].transform(
-            len) == feature_window]
-    df_rolled_full.dropna(subset=['target_shift'], inplace=True)
-    cols = list(df_rolled_full.columns)
-    first_cols = [id_col, 'ref_date', 'winID', datetime_col, 'timeID',
-                  'target_shift']
-    remaining_cols = list(set(cols) - set(first_cols))
-    cols = first_cols + sorted(remaining_cols)
-    df_rolled_full = df_rolled_full[cols]
+        df_rolled_full = pd.merge(df_rolled, df_target, how='left',
+                                  on=[id_col, 'ref_date'])
+        df_rolled_full = df_rolled_full[
+            df_rolled_full.groupby([id_col, 'winID'])['timeID'].transform(
+                len) == feature_window]
+        df_rolled_full.dropna(subset=['target_shift'], inplace=True)
+        cols = list(df_rolled_full.columns)
+        first_cols = [id_col, 'ref_date', 'winID', datetime_col, 'timeID',
+                      'target_shift']
+        remaining_cols = list(set(cols) - set(first_cols))
+        cols = first_cols + sorted(remaining_cols)
+        df_rolled_full = df_rolled_full[cols]
+    else:
+        cols = list(df_rolled.columns)
+        first_cols = [id_col, 'ref_date', 'winID', datetime_col, 'timeID']
+        remaining_cols = list(set(cols) - set(first_cols))
+        cols = first_cols + sorted(remaining_cols)
+        df_rolled_full = df_rolled[cols]
 
     return df_rolled_full
