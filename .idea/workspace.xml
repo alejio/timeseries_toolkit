@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb265ee8-4f72-49ed-99ba-a7dc003c1242" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeseries_toolkit/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/timeseries_toolkit/preprocessing.py" afterDir="false" />
-    </list>
+    <list default="true" id="bb265ee8-4f72-49ed-99ba-a7dc003c1242" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,12 +89,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/timeseries_toolkit/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+            <state relative-caret-position="125">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1534524990147" expanded="true" signature="1050:1268" ph="..." />
-                <marker date="1534524990147" expanded="true" signature="3704:3705" ph="..." />
+                <marker date="1534525370189" expanded="true" signature="1050:1268" ph="..." />
+                <marker date="1534525370189" expanded="true" signature="3664:3665" ph="..." />
               </folding>
             </state>
           </provider>
@@ -106,10 +103,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timeseries_toolkit/tests/test_preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="180">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
+                <marker date="1534525370189" expanded="true" signature="1180:1185" ph="..." />
               </folding>
             </state>
           </provider>
@@ -476,9 +474,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/all_stocks_2017-01-01_to_2018-01-01.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/all_stocks_2017-01-01_to_2018-01-01.csv" />
     <entry file="file://$USER_HOME$/anaconda/envs/timeseries_toolkit/lib/python3.6/site-packages/pandas/core/generic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -538,10 +534,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timeseries_toolkit/tests/test_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="180">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
+            <marker date="1534525370189" expanded="true" signature="1180:1185" ph="..." />
           </folding>
         </state>
       </provider>
@@ -558,12 +555,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timeseries_toolkit/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+        <state relative-caret-position="125">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1534524990147" expanded="true" signature="1050:1268" ph="..." />
-            <marker date="1534524990147" expanded="true" signature="3704:3705" ph="..." />
+            <marker date="1534525370189" expanded="true" signature="1050:1268" ph="..." />
+            <marker date="1534525370189" expanded="true" signature="3664:3665" ph="..." />
           </folding>
         </state>
       </provider>
