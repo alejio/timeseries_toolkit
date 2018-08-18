@@ -1,6 +1,6 @@
 import pandas as pd
 from tsfresh.utilities.dataframe_functions import roll_time_series
-
+from copy import deepcopy
 
 def map_timeid(datetime: pd.Series) -> pd.Series:
     """
@@ -87,12 +87,14 @@ def get_aggregated_df(df_rolled: pd.DataFrame, aggregations: dict,
                       datetime_col: str='ref_date',
                    ) -> pd.DataFrame:
 
+    aggregations_local = deepcopy(aggregations)
     if df_modelling:
-        aggregations[target_col] = 'last'
+        aggregations_local[target_col] = 'last'
     else:
         pass
 
-    df_aggregated = df_rolled.groupby([id_col, datetime_col]).agg(aggregations)
+    df_aggregated = df_rolled.groupby([id_col,
+                                       datetime_col]).agg(aggregations_local)
     df_aggregated.reset_index(inplace=True)
     # Rename columns
     df_aggregated.columns = [i[0] + '_' + i[1] if len(i) == 2 else i for i in
