@@ -1,6 +1,6 @@
 import pandas as pd
 from tsfresh.utilities.dataframe_functions import roll_time_series
-
+from copy import deepcopy
 
 def map_timeid(datetime: pd.Series) -> pd.Series:
     """
@@ -81,12 +81,20 @@ def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
 
 
 def get_aggregated_df(df_rolled: pd.DataFrame, aggregations: dict,
-                   id_col: str='id',
-                   target_col: str='target_shift',
-                   datetime_col: str='ref_date',
+                      id_col: str='id',
+                      df_modelling: bool=True,
+                      target_col: str='target_shift',
+                      datetime_col: str='ref_date',
                    ) -> pd.DataFrame:
-    aggregations[target_col] = 'last'
-    df_aggregated = df_rolled.groupby([id_col, datetime_col]).agg(aggregations)
+
+    aggregations_local = deepcopy(aggregations)
+    if df_modelling:
+        aggregations_local[target_col] = 'last'
+    else:
+        pass
+
+    df_aggregated = df_rolled.groupby([id_col,
+                                       datetime_col]).agg(aggregations_local)
     df_aggregated.reset_index(inplace=True)
     # Rename columns
     df_aggregated.columns = [i[0] + '_' + i[1] if len(i) == 2 else i for i in
@@ -95,6 +103,10 @@ def get_aggregated_df(df_rolled: pd.DataFrame, aggregations: dict,
                              df_aggregated.columns]
     df_aggregated = pd.concat(
         [df_aggregated, pd.get_dummies(list(df_aggregated.id))], axis=1)
-    df_aggregated.rename(columns={target_col + '_last': 'target_col'},
-                         inplace=True)
+    if df_modelling:
+        df_aggregated.rename(columns={target_col + '_last': target_col},
+                             inplace=True)
+    else:
+        pass
+
     return df_aggregated

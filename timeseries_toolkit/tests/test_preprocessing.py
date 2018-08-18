@@ -21,5 +21,5 @@ def test_get_rolled_df():
     #        str(pd.to_datetime(df.loc[df['id'] == 'AXP', 'datetime']).dt.date.sort_values().unique()[feature_window-1])
     # assert df_rolled.loc[(df_rolled.id == 'AXP') & (df_rolled['ref_date'] == pd.to_datetime('2017-01-09')), 'target_roll'] == 76.62
 
-def test_get_aggregated_df():
+# def test_get_aggregated_df():
     # TODO
