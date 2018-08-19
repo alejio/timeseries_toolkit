@@ -4,11 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='timeseries_toolkit',
-      version='0.1.2dev',
+      version='0.1.4dev',
       description='Helper library for time series forecasting',
       long_description = long_description,
       long_description_content_type="text/markdown",
-      install_requires=[open('requirements.txt').read().splitlines()],
+      install_requires=['tsfresh',
+                        'pandas',
+                        'numpy',
+                        'scikit-learn'],
       packages=find_packages(),
       author='Alex Spanos',
       author_email='alexi.spanos@yahoo.com',

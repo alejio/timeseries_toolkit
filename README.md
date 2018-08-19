@@ -4,7 +4,7 @@
 
 **Date**: 09/08/18
 
-* Latest version: `0.1.2dev`
+* Latest version: `0.1.4dev`
 
 
 ## Overview
@@ -35,7 +35,11 @@ timeseries_toolkit requires
 
 ### User installation
 
-`pip install timeseries-toolkit`
+`pip install -U timeseries-toolkit`
 
+**Note**: if installation fails on MacOSX because of `pip` failing to
+build wheels for `psutil`, the reason is most likely due to a `gcc`
+incompatibility. Doing `conda install gcc` before trying to install
+`pip install -U timeseries-toolkit` should fix the problem.
 
 ### Changelog
