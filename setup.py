@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='timeseries_toolkit',
-      version='0.1dev',
+      version='0.1.1dev',
       description='Helper library for time series forecasting',
       install_requires=[open('requirements.txt').read().splitlines()],
       packages=find_packages(),

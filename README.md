@@ -35,7 +35,7 @@ timeseries_toolkit requires
 
 ### User installation
 
-`pip install timeseries_toolkit`
+`pip install timeseries-toolkit`
 
 
 ### Changelog
