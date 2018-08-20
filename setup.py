@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='timeseries_toolkit',
-      version='0.1.5dev',
+      version='0.1.6dev',
       description='Helper library for time series forecasting',
       long_description = long_description,
       long_description_content_type="text/markdown",

@@ -4,7 +4,7 @@
 
 **Date**: 09/08/18
 
-* Latest version: `0.1.5dev`
+* Latest version: `0.1.6dev`
 
 
 ## Overview
