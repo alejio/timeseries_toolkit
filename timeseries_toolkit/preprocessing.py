@@ -2,6 +2,7 @@ import pandas as pd
 from tsfresh.utilities.dataframe_functions import roll_time_series
 from copy import deepcopy
 
+
 def map_timeid(datetime: pd.Series) -> pd.Series:
     """
     Maps datetime to an integer time_id
@@ -16,7 +17,7 @@ def map_timeid(datetime: pd.Series) -> pd.Series:
 
 def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
                    df_modelling: bool=True,
-                   id_col : str='id',
+                   id_col: str='id',
                    target_col: str='target',
                    datetime_col: str='datetime',
                    dtformat: str='%d/%m/%Y') -> pd.DataFrame:
@@ -25,13 +26,16 @@ def get_rollwin_df(df_raw: pd.DataFrame, feature_window, forecast_horizon,
     :param df_raw:
     :param feature_window:
     :param forecast_horizon:
+    :param df_modelling:
+    :param id_col:
     :param target_col:
     :param datetime_col:
+    :param dtformat:
     :return:
     """
+
     df = df_raw.copy()
-    df[datetime_col] = pd.to_datetime(df[datetime_col],
-                                    format=dtformat).dt.date
+    df[datetime_col] = pd.to_datetime(df[datetime_col], format=dtformat).dt.date
 
     df['timeID'] = map_timeid(df[datetime_col])
     df['kind'] = df[id_col]
@@ -84,8 +88,7 @@ def get_aggregated_df(df_rolled: pd.DataFrame, aggregations: dict,
                       id_col: str='id',
                       df_modelling: bool=True,
                       target_col: str='target_shift',
-                      datetime_col: str='ref_date',
-                   ) -> pd.DataFrame:
+                      datetime_col: str='ref_date') -> pd.DataFrame:
 
     aggregations_local = deepcopy(aggregations)
     if df_modelling:

@@ -29,9 +29,9 @@ comparison for standard methodologies such as the
 timeseries_toolkit requires
 
 - Python (3.6)
-- Numpy
-- Pandas
-- Scipy
+- `numpy`
+- `pandas`
+- `scipy`
 
 ### User installation
 
