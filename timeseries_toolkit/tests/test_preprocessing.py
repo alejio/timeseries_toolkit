@@ -15,7 +15,11 @@ def test_get_rolled_df():
     feature_window = 5
     forecast_horizon = 3
     df_rolled = preprocessing.get_rollwin_df(df, feature_window, forecast_horizon)
-    assert len(df_rolled) == df['id'].nunique() * feature_window * (len(df[df.id =='AXP']) - feature_window - forecast_horizon + 1)
+    assert len(df_rolled[df_rolled.groupby(['id', 'winID'])['timeID'].
+               transform(len) == 5].dropna()) == \
+           df['id'].nunique() * feature_window * (len(df[df.id =='AXP']) -
+                                                  feature_window -
+                                                  forecast_horizon + 1)
     # TODO: add tests :(
     # assert str(df_rolled.loc[df_rolled['id'] =='AXP', 'ref_date'].min()) == \
     #        str(pd.to_datetime(df.loc[df['id'] == 'AXP', 'datetime']).dt.date.sort_values().unique()[feature_window-1])
